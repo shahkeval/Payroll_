@@ -1,0 +1,236 @@
+/* Overall Employee container styling */
+.allemp {
+    display: flex;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #e1bee7);
+    color: #333;
+    overflow: hidden;
+}
+
+/* Navigation bar styling */
+.nav {
+    width: 240px;
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.nav:hover {
+    width: 280px;
+    background: #34495e;
+}
+
+.nav a {
+    display: block;
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+}
+
+.nav a.active {
+    background: #1abc9c;
+    transform: scale(1.05);
+}
+
+.nav a:hover {
+    background: #16a085;
+    transform: scale(1.03);
+}
+
+/* Side container styling */
+.side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Table container styling */
+.tblcontainer1,
+.tblcontainer2 {
+    flex: 1;
+    overflow: auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    transition: background 0.3s ease;
+}
+
+table th {
+    background: linear-gradient(145deg, #3498db, #2980b9);
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+}
+
+.tblhead th {
+    font-weight: 600;
+    text-align: center;
+}
+
+.tblcontainer2 .heading {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+    .udp,
+    .dlt {
+        border: none;
+        border-radius: 4px;
+        padding: 8px 12px;
+        cursor: pointer;
+        transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .udp {
+        background-color: #3498db;
+        color: white;
+    }
+
+    .dlt {
+        background-color: #e74c3c;
+        color: white;
+    }
+
+    .udp:hover,
+    .dlt:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+/* Form button styling */
+.rytsubmitbtn,
+.lefsubmitbtn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 10px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.rytsubmitbtn {
+    background-color: #27ae60;
+    color: #ffffff;
+}
+
+.lefsubmitbtn {
+    background-color: #c0392b;
+    color: #ffffff;
+}
+
+.rytsubmitbtn:hover,
+.lefsubmitbtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Password toggle button */
+.showhidebtn {
+    margin-left: 10px;
+    background: transparent;
+    border: none;
+    color: #2980b9;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.showhidebtn:hover {
+    color: #3498db;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .allemp {
+        flex-direction: column;
+    }
+
+    .nav {
+        width: 100%;
+        padding: 10px;
+        box-shadow: none;
+        transition: none;
+    }
+
+    .nav:hover {
+        width: 100%;
+        background: #34495e;
+    }
+
+    .side {
+        margin-top: 20px;
+    }
+
+    .tblcontainer1,
+    .tblcontainer2 {
+        margin-bottom: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav a {
+        font-size: 14px;
+    }
+
+    .udp,
+    .dlt {
+        padding: 6px 10px;
+    }
+
+    .rytsubmitbtn,
+    .lefsubmitbtn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+}

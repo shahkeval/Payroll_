@@ -1,0 +1,166 @@
+/* Overall container styling for HomeEmp */
+.homeemp {
+    display: flex;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #e1bee7);
+    color: #333;
+    overflow: hidden;
+}
+
+/* Navigation bar styling */
+.nav {
+    width: 240px;
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.nav:hover {
+    width: 280px;
+    background: #34495e;
+}
+
+.nav a {
+    display: block;
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+}
+
+.nav a.active {
+    background: #1abc9c;
+    transform: scale(1.05);
+}
+
+.nav a:hover {
+    background: #16a085;
+    transform: scale(1.03);
+}
+
+/* Side container styling */
+.side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Table container styling */
+.tblcontainer {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    transition: background 0.3s ease;
+}
+
+table th {
+    background: linear-gradient(145deg, #3498db, #2980b9);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #3498db, #2980b9);
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #2980b9, #3498db);
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Input field styling */
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .homeemp {
+        flex-direction: column;
+    }
+
+    .nav {
+        width: 100%;
+        padding: 10px;
+        box-shadow: none;
+        transition: none;
+    }
+
+    .nav:hover {
+        width: 100%;
+        background: #34495e;
+    }
+
+    .side {
+        margin-top: 20px;
+    }
+
+    .tblcontainer {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav a {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

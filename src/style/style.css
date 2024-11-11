@@ -1,0 +1,898 @@
+*{
+    font-family: sans-serif;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px 10px 10px;
+    width: 105%;
+    border-radius: 0 20px 20px 0;
+    transition: all 1s;
+}
+a:hover{
+    width: 103%;
+    text-align: right;
+    background: #012580;
+}
+.active{
+    border-left: 5px solid #fff;
+    background: #041f63;
+}
+.active:hover{
+    width: 105%;
+    background: #041f63;
+    text-align: left;
+}
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: left;
+    flex-direction: column;
+    background: #00164d;
+    z-index: 1;
+}
+.side{
+    width: calc(100% - 150px);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 150px;
+    background: #fff;
+}
+.home .allbtns{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 550px;
+    padding: 7px 20px;
+    border-radius: 20px 0 0 20px;
+    background-color: #00164d;
+    border: 3px solid #fff;
+    border-right: 0px;
+    outline: 10px solid #00164d;
+}
+.home .allbtns button{
+    background: transparent;
+    color: #fff;
+    border: 0;
+    padding: 5px;
+    transition: all 1s;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.home .allbtns button:hover{
+    background: #fff;
+    color: #012580;
+}
+.home .tblcontainer{
+    position: absolute;
+    bottom: 50px;
+    width: 600px;
+    height: 300px;
+    max-height: 250px;
+    overflow: scroll;
+}
+.home tr:nth-child(even) {
+    background-color: #7685ab;
+}
+.home td{
+    text-align: center;
+    padding: 5px 0;
+    font-size: 13px;
+}
+.home .heading{
+    background: #012580 ;
+    color: #fff ;
+}
+.home .tblhead{
+    background: #00164d !important;
+    color: #fff ;
+    font-size: 13px;
+}
+.home .tblhead th{
+    padding: 5px;
+}
+.home .activetbl{
+    background: #fff !important;
+    color: #012580 !important;
+}
+.home table{
+    width: 100%;
+}
+.home .appstate{
+    background: #a0d49f;
+}
+.home .rejstate{
+    background: #d4a79f;
+}
+.home .panstate{
+    background: #d3d49f;
+}
+.emp .tblcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #012580;
+    width: 425px;
+    height: 425px;
+    border-radius: 212px;
+    position: absolute;
+    right: 100px;
+    color: #fff;
+}
+.emp .heading{
+    background: #fff;
+    color: #012580;
+    width: 100%;
+    border: 15px solid #fff;
+    position: relative;
+    left: -15px;
+    text-align: center;
+}
+.emp input{
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    outline: 0px;
+}
+.emp input:focus{
+    outline: none;
+}
+.emp table{
+    position: relative;
+    left: 17px;
+}
+.emp .showhidebtn{
+    position: relative;
+    right: 35px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    background: #00164d;
+    color: #fff;
+    font-size: 12px;
+}
+.emp .rytsubmitbtn , .emp .lefsubmitbtn{
+    position: relative;
+    left: 55%;
+    background: #00164d;
+    z-index: -1;
+    border: 0;
+    color: #fff;
+    width: 100px;
+    text-align: right;
+    padding: 0 10px 0 0;
+    height: 35px;
+    bottom: -20px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+.emp .lefsubmitbtn{
+    left: -10%;
+    text-align: left;
+    padding: 0 0 0 10px;
+    border-radius: 20px 0 0 20px;
+}
+
+
+.admin .admincontainer table input{
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    margin: 5px 0;
+    color: #fff;
+}
+.admin .admincontainer table input:focus{
+    outline: none;
+}
+.admin .admincontainer table button{
+    position: absolute;
+    right :45px;
+    border: 1px solid #fff;
+    background: #00164d;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 13px;
+}
+.admin .admincontainer .subbtn{
+    position: relative;
+    left: 260px;
+    padding: 5px 0;
+    bottom: -50px;
+    width: 80px;
+    border: 0px;
+    background: #fff;
+    font-weight: bold;
+    color: #012580;
+    border-radius: 10px;
+    transition: all 1s;
+    cursor: pointer;
+}
+.admin .admincontainer .subbtn:hover{
+    background: #00164d;
+    color: #fff;
+    outline: 3px solid #fff;
+}
+.admin .adminface{
+    position: absolute;
+    right: 10px;
+    width: 300px;
+    height: 500px;
+    background: transparent;
+}
+.admin .adminface .face{
+    position: absolute;
+    left: 75px;
+    top: 100px;
+    width: 150px;
+    height: 150px;
+    border-radius: 95px;
+    z-index: 1;
+    background: #00164d;
+    outline: 20px solid #fff;
+}
+.admin .adminface .body{
+    position: absolute;
+    right: 25px;
+    border-radius: 100px;
+    top: 250px;
+    width: 250px;
+    height: 500px;
+    background: #00164d;
+}
+
+.alladmin .tblcontainer1{
+    position: absolute;
+    top: 40px;
+    bottom: 40px;
+    width: 710px;
+    overflow: scroll;
+}
+.alladmin .tblcontainer1 tr:nth-child(even) {
+    background-color: #7685ab;
+}
+.alladmin .tblcontainer1 td{
+    padding: 5px 0;
+    font-size: 13px;
+    text-align: center;
+}
+.alladmin .tblcontainer1 .tblhead{
+    background: #00164d !important;
+    color: #fff ;
+    font-size: 13px;
+}
+.alladmin .tblcontainer1 .tblhead th{
+    padding: 5px;
+}
+.alladmin .tblcontainer1 table{
+    width: 100%;
+}
+.alladmin .udp , .alladmin .dlt{
+    background:#d0d65e;
+    color: #000;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    margin: 5px;
+}
+.alladmin .dlt {
+    background: #283044;
+    color: var(--text, #fff);
+    box-shadow: 0 9px 20px rgba(0, 9, 61, 0.2);
+    
+    --background-hover: #1E2235;
+    --text: #fff;
+    --shadow: rgba(0, 9, 61, 0.2);
+    --paper: #5C86FF;
+    --paper-lines: #fff;
+    --trash: #E1E6F9;
+    --trash-lines: #BBC1E1;
+    --check: #fff;
+    --check-background: #5C86FF;
+  
+    position: relative;
+    border: none;
+    outline: none;
+    padding: 10px 24px;
+    border-radius: 7px;
+    min-width: 142px;
+    cursor: pointer;
+    display: flex;
+    transition: transform 0.35s, box-shadow 0.3s, background 0.3s;
+  }
+  
+  .alladmin .dlt:hover {
+    background: var(--background-hover);
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px var(--shadow);
+  }
+  
+
+.alladmin .tblcontainer2{
+    position: absolute;
+    right: -50px;
+    bottom: -300px;
+    width: 700px;
+    height: 700px;
+    border-radius: 350px;
+    background: #012580;
+}
+.alladmin .tblcontainer2 table{
+    position: absolute;
+    right: 175px;
+    top: 28%;
+    color: #fff;
+}
+.alladmin .tblcontainer2 table input{
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    margin: 2.5px 0;
+}
+.alladmin .tblcontainer2 table input:focus{
+    outline: none;
+}
+.alladmin .tblcontainer2 .btns{
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.alladmin .tblcontainer2 .btns button{
+    width: 80px;
+    padding: 5px 0;
+    border-radius: 10px;
+    border: 0;
+    font-weight: bold;
+    color: #012580;
+    cursor: pointer;
+    transition: all 1s; 
+}
+.alladmin .tblcontainer2 .btns button:hover{
+    background: #00164d;
+    color: #fff;
+    outline: 3px solid #fff;
+}
+.alladmin .tblcontainer2 h2{
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    position: absolute;
+    top: 100px;
+    padding: 5px;
+    color: #012580;
+}
+
+.gensal .salbar{
+    position: absolute;
+    right: 0px;
+    top: 50px;
+    width: 300px;
+    height: 40px;
+    background: #00164d;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 30px 0 0 30px;
+    padding: 0 20px;
+    border: 3px solid #fff;
+    outline: 10px solid #00164d;
+    border-right: 0;
+}
+.gensal .salbar button{
+    border: 0;
+    border-radius: 20px;
+    width: 120px;
+    background: transparent;
+    color: #fff;
+    padding: 5px;
+    transition: all 1s;
+    cursor: pointer;
+}
+.gensal .salbar button:hover{
+    background: #fff;
+    color: #00164d;
+}
+.gensal .salbar .activeside{
+    background: #fff;
+    color: #00164d;
+}
+.gensal .formside .coin{
+    position: absolute;
+    left: 70px;
+    bottom: 50px;
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+    background: #e8df68;
+    border: 20px solid #fff;
+    outline: 30px solid #e3d407;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 200px;
+    color: #fff;
+    transition: all 1.5s;
+}
+.gensal .formside .coin:hover{
+    background: #e3d407;
+    outline: 30px solid #e8df68;
+}
+.gensal .formside form{
+    position: absolute;
+    bottom: 50px;
+    right: 40px;
+    background: #012580;
+    width: 450px;
+    height: 250px;
+    border-radius: 300px 0 300px 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.gensal .formside form input , .gensal .formside form select{
+    background: transparent;
+    color: #fff;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    width: 140px;
+}
+.gensal .formside form select{
+    color: #fff;
+}
+.gensal .formside form select option{
+    color: #000;
+}
+.gensal .formside form select:focus , .gensal .formside form input:focus {
+    outline: none;
+}
+.gensal .formside form .btnsub{
+    position: absolute;
+    bottom: 20px;
+    left: 245px;
+}
+.gensal .formside form .btnsub button{
+    width: 110px;
+    text-align: left;
+    padding: 5px 0 5px 10px;
+    border: 0;
+    background: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #00164d;
+    transition: all 1s;
+}
+.gensal .formside form .btnsub button:hover{
+    background: #00164d;
+    outline: 3px solid #fff;
+    color: #fff;
+}
+.gensal .tableside{
+    position: absolute;
+    top: 150px;
+    height: 250px;
+    overflow: scroll;
+    font-size: 14px;
+}
+.gensal .tableside table th{
+    background: #00164d;
+    padding: 5px;
+    color: #fff;
+    height: 30px;
+}
+.gensal .tableside table tr:nth-child(even) {
+    background-color: #7685ab;
+}
+.gensal .tableside table td{
+    text-align: center;
+    padding: 5px 3px;
+}
+.gensal .tableside table button{
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    border: 0;
+    background: #e16d58;
+}
+
+.leavereq .btnbar{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 450px;
+    height: 50px;
+    background: #00164d;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+    border-radius: 30px 0 0 30px;
+    outline: 10px solid #00164d;
+    border: 3px solid #fff;
+    border-right: 0;
+}
+.leavereq .btnbar button{
+    width: 110px;
+    padding: 5px;
+    border-radius: 20px;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    transition: all 1s;
+    cursor: pointer;
+}
+.leavereq .btnbar button:hover{
+    background: #fff;
+    color: #00164d;
+}
+.leavereq .btnbar .activeside{
+    background: #fff;
+    color: #00164d;
+}
+.leavereq .tbl{
+    width: 550px;
+    min-height: 270px;
+    position: absolute;
+    bottom: 30px;
+    overflow: scroll;
+}
+.leavereq .tbl table{
+    font-size: 14px;
+    width: 100%;
+}
+.leavereq .tbl table th{
+    padding: 5px;
+    background: #00164d;
+    color: #fff;
+    height: 40px;
+}
+.leavereq .tbl table tr:nth-child(even){
+    background: #7685ab;
+}
+.leavereq .tbl table td{
+    text-align: center;
+    padding: 5px;
+}
+.leavereq .tbl table button{
+    color: #000;
+    border: 0;
+    padding: 5px;
+    width: 60px;
+    border-radius: 20px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.leavereq .tbl table button:hover{
+    opacity: 1;
+}
+.leavereq .tbl table .appbtn{
+    background: #d0d65e;
+}
+.leavereq .tbl table .rejbtn{
+    background: #e16d58;
+}
+.leavereq .tbl table .rej{
+    background: #cdb1ac;
+    font-weight: bolder;
+    color: red;
+}
+.leavereq .tbl table .app{
+    background: #a0d49f;
+    color: green;
+    font-weight: bolder;
+}
+.leavereq .notfound .icon{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 100px;
+    top: calc(55% - 52.5px) ;
+    background: red;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    border-radius: 52.5px;
+    border: 5px solid #fff;
+    outline: 8px solid red;
+    overflow: none;
+}
+.leavereq .notfound .msg{
+    color: red;
+    position: absolute;
+    left: 250px;
+    top: calc(55% - 52.5px);
+}
+.login{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+}
+.login .emp , .login .admin {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 1s;
+    user-select: none;
+}
+.login .admin .face , .login .emp .face{
+    transition: all 1s;
+}
+.login .emp:hover , .login .admin:hover{
+    opacity: 1;
+}
+.login .emp .face{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 50px;
+    left: 200px;
+    background: #00164d;
+    border-radius: 85px;
+    outline: 10px solid #fff;
+    z-index: 1;
+}
+.login .emp .body{
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    left: 150px;
+    top: 175px;
+    background: #00164d;
+    color: #00164d;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.login .emp .btn{
+    width: 100%;
+    background: #fff;
+    padding: 0px;
+    text-align: center;
+}
+.login .admin .face{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 50px;
+    right: 200px;
+    background: #00164d;
+    border-radius: 85px;
+    outline: 10px solid #fff;
+    z-index: 1;
+}
+.login .admin .body{
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    right: 150px;
+    top: 175px;
+    background: #00164d;
+    color: #00164d;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login .admin .btn{
+    width: 100%;
+    background: #fff;
+    padding: 0px;
+    text-align: center;
+}
+.login .admin:hover .face , .login .emp:hover .face {
+    top: 40px;
+  }
+.login table{
+    width: 250px;
+    position: absolute;
+    left: calc(50% - 125px);
+    top: 200px;
+}
+.login table td{
+    padding: 5px 0;
+}
+.login table td input{
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #00164d;
+    border-top: 2px solid #00164d;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: bold;
+}
+.login table td input:focus{
+    outline: none;
+}
+.login table td .hideshowbtn {
+    cursor: pointer;
+  position: absolute;
+  right: 10px; 
+  top: 60%; 
+  user-select: none;
+}
+.homeemp .tblcontainer{
+    background: #012580;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+.homeemp .tblcontainer th{
+    text-align: left;
+    padding: 5px;
+}
+.homeemp .tblcontainer td{
+    padding: 5px;
+    text-align: left;
+}
+.homeemp .tblcontainer td input{
+    width: 120px;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    height: 15px;
+}
+.homeemp .tblcontainer button{
+    width: 70px;
+    border: 0px;
+    background: #fff;
+    color: #00164d;
+    padding: 3px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 1s;
+    outline: 3px solid #fff;
+
+}
+.homeemp .tblcontainer button:hover{
+    background: #00164d;
+    color: #fff;
+}
+.homeemp .tblcontainer td input:focus{
+    outline: none;
+}
+
+.levreqemp .btnbar{
+    position: absolute;
+    width: 400px;
+    height: 35px;
+    background: #00164d;
+    outline: 10px solid #00164d;
+    border-radius: 20px 0 0 20px;
+    border: 5px solid #fff;
+    padding: 0 20px;
+    right: 0;
+    top: 50px;
+    border-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.levreqemp .btnbar button{
+    background: transparent;
+    color: #fff;
+    border-radius: 20px;
+    padding: 3px;
+    width: 100px;
+    cursor: pointer;
+    transition: all 1s;
+    border: 0;
+}
+.levreqemp .btnbar button:hover , .levreqemp .btnbar .activetbl{
+    background: #fff;
+    color: #00164d;
+}
+.levreqemp .leaveside{
+    width: 500px;
+    position: absolute;
+    top: 130px;
+    bottom: 40px;
+    overflow: scroll;
+    font-size: 14px;
+}
+.levreqemp .leaveside th{
+    background: #00164d;
+    color: #fff;
+    padding: 5px;
+}
+.levreqemp .leaveside td{
+    text-align: center;
+    padding: 5px;
+}
+.levreqemp .leaveside tr:nth-child(even) {
+    background-color: #7685ab;
+}
+.levreqemp .leaveside .rej{
+    background: #cdb1ac;
+    color: red; 
+    font-weight: bold;
+}
+.levreqemp .leaveside .app{
+    background: #a0d49f;
+    color: green; 
+    font-weight: bold;
+}
+.levreqemp .leaveside .pan{
+    background: #fcffcc;
+    color: #000; 
+    font-weight: bold;
+}
+.levreqemp .applyside{
+    background: #012580;
+    color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+}
+.levreqemp .applyside table td{
+    padding: 3px;
+}
+.levreqemp .applyside table td input{
+    width: 150px;
+    background: transparent;
+    color: #fff;
+    border: 0;
+    border-bottom: 1px solid #fff;
+}
+.levreqemp .applyside table td input:focus{
+    outline: 0;
+}
+.levreqemp .applyside table td button{
+    background: #fff;
+    color: #00164d;
+    padding: 2px;
+    width: 60px;
+    border-radius: 20px;
+    border: 0;
+    outline: 2px solid #fff;
+    transition: all 1s;
+    user-select: none;
+}
+.levreqemp .applyside table td button:hover{
+    background: #00164d;
+    color: #fff;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #012580;
+    border-radius: 20px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

@@ -1,0 +1,227 @@
+/* Overall GenSal container styling */
+.gensal {
+    display: flex;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #e1bee7);
+    color: #333;
+    overflow: hidden;
+}
+
+/* Navigation bar styling */
+.nav {
+    width: 240px;
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.nav:hover {
+    width: 280px;
+    background: #34495e;
+}
+
+.nav a {
+    display: block;
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+}
+
+.nav a.active {
+    background: #1abc9c;
+    transform: scale(1.05);
+}
+
+.nav a:hover {
+    background: #16a085;
+    transform: scale(1.03);
+}
+
+/* Side container styling */
+.side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Salary form and table toggler styling */
+.salbar {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.salbar button {
+    background: #2980b9;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.salbar button:hover {
+    background: #1abc9c;
+    transform: scale(1.03);
+}
+
+.activeside {
+    background: #16a085;
+    transform: scale(1.05);
+}
+
+/* Form styling */
+.formside {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.coin {
+    font-size: 60px;
+    color: #2980b9;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    transition: background 0.3s ease;
+}
+
+table td input, table td select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.btnsub {
+    text-align: center;
+}
+
+.btnsub button {
+    background: #3498db;
+    color: #ffffff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btnsub button:hover {
+    background: #1abc9c;
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Salary records table styling */
+.tableside {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+}
+
+.tableside table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableside th {
+    background: #2980b9;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.tableside td {
+    text-align: center;
+}
+
+.tableside td button {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #e74c3c;
+    color: #ffffff;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.tableside td button:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .gensal {
+        flex-direction: column;
+    }
+
+    .nav {
+        width: 100%;
+        padding: 10px;
+        box-shadow: none;
+        transition: none;
+    }
+
+    .nav:hover {
+        width: 100%;
+        background: #34495e;
+    }
+
+    .side {
+        margin-top: 20px;
+    }
+
+    table td input, table td select {
+        font-size: 14px;
+    }
+
+    .salbar button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav a {
+        font-size: 14px;
+    }
+
+    .btnsub button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}

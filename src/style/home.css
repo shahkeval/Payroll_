@@ -1,0 +1,207 @@
+/* Overall Home container styling */
+.home {
+    display: flex;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #e1bee7);
+    color: #333;
+    overflow: hidden;
+}
+
+/* Navigation bar styling */
+.nav {
+    width: 240px;
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.nav:hover {
+    width: 280px;
+    background: #34495e;
+}
+
+.nav a {
+    display: block;
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 500;
+}
+
+.nav a.active {
+    background: #1abc9c;
+    transform: scale(1.05);
+}
+
+.nav a:hover {
+    background: #16a085;
+    transform: scale(1.03);
+}
+
+/* Side container styling */
+.side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Buttons container styling */
+.allbtns {
+    display: flex;
+    justify-content: space-around;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.allbtns button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #3498db, #2980b9);
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.allbtns button.activetbl {
+    background: linear-gradient(145deg, #2980b9, #3498db);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.allbtns button:hover {
+    background: linear-gradient(145deg, #1abc9c, #16a085);
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table container styling */
+.tblcontainer {
+    flex: 1;
+    overflow: auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    transition: background 0.3s ease;
+}
+
+table th {
+    background: linear-gradient(145deg, #3498db, #2980b9);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+}
+
+.heading th {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    background: #2980b9;
+}
+
+.tblhead th {
+    font-weight: 600;
+}
+
+/* Leave status styling */
+.appstate {
+    color: #27ae60;
+    font-weight: 600;
+}
+
+.rejstate {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.panstate {
+    color: #f39c12;
+    font-weight: 600;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+    }
+
+    .nav {
+        width: 100%;
+        padding: 10px;
+        box-shadow: none;
+        transition: none;
+    }
+
+    .nav:hover {
+        width: 100%;
+        background: #34495e;
+    }
+
+    .side {
+        margin-top: 20px;
+    }
+
+    .allbtns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .allbtns button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav a {
+        font-size: 14px;
+    }
+
+    .allbtns button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
