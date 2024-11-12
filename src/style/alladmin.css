@@ -1,4 +1,4 @@
-/* Overall AllAdmin container styling */
+/* Overall AllAdmin container styling (default for larger screens) */
 .alladmin {
     display: flex;
     height: 100vh;
@@ -159,17 +159,45 @@ table td input {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    .alladmin {
-        flex-direction: column;
+/* Responsive design for tablets and small screens */
+@media (max-width: 1024px) {
+    .nav {
+        width: 200px;
     }
 
+    .nav:hover {
+        width: 220px;
+    }
+
+    .alladmin {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .tblcontainer1, .tblcontainer2 {
+        padding: 15px;
+    }
+
+    .side {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .btns button {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}
+
+/* Responsive design for smaller tablets and large mobile screens */
+@media (max-width: 768px) {
     .nav {
         width: 100%;
-        padding: 10px;
         box-shadow: none;
-        transition: none;
+        padding: 15px;
     }
 
     .nav:hover {
@@ -177,8 +205,28 @@ table td input {
         background: #34495e;
     }
 
+    .nav a {
+        padding: 12px;
+        font-size: 15px;
+    }
+
     .side {
         margin-top: 20px;
+        padding: 15px;
+    }
+
+    .tblcontainer1, .tblcontainer2 {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .btns button {
+        font-size: 14px;
+        padding: 10px;
     }
 
     table td input {
@@ -186,12 +234,47 @@ table td input {
     }
 }
 
+/* Responsive design for mobile screens */
 @media (max-width: 480px) {
+    .nav {
+        padding: 10px;
+    }
+
     .nav a {
         font-size: 14px;
+        padding: 10px;
+        margin-bottom: 5px;
+    }
+
+    .side {
+        padding: 10px;
+    }
+
+    .tblcontainer1, .tblcontainer2 {
+        padding: 8px;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+
+    table td input {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .btns {
+        flex-direction: column;
+        gap: 8px;
     }
 
     .btns button {
+        width: 100%;
         font-size: 14px;
         padding: 8px;
     }

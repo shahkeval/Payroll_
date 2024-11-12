@@ -113,30 +113,30 @@ table tr:hover {
 }
 
 /* Button styling */
-    .udp,
-    .dlt {
-        border: none;
-        border-radius: 4px;
-        padding: 8px 12px;
-        cursor: pointer;
-        transition: transform 0.3s ease, background 0.3s ease;
-    }
+.udp,
+.dlt {
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
 
-    .udp {
-        background-color: #3498db;
-        color: white;
-    }
+.udp {
+    background-color: #3498db;
+    color: white;
+}
 
-    .dlt {
-        background-color: #e74c3c;
-        color: white;
-    }
+.dlt {
+    background-color: #e74c3c;
+    color: white;
+}
 
-    .udp:hover,
-    .dlt:hover {
-        transform: scale(1.1);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
+.udp:hover,
+.dlt:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
 /* Form button styling */
 .rytsubmitbtn,
@@ -182,17 +182,45 @@ table tr:hover {
     color: #3498db;
 }
 
-/* Responsive design for smaller screens */
+/* Responsive design for tablets and smaller screens */
+@media (max-width: 1024px) {
+    .nav {
+        width: 220px;
+    }
+
+    .nav:hover {
+        width: 240px;
+    }
+
+    .side {
+        padding: 15px;
+    }
+
+    table {
+        font-size: 15px;
+    }
+
+    .tblcontainer2 .heading {
+        font-size: 22px;
+    }
+
+    .rytsubmitbtn,
+    .lefsubmitbtn {
+        font-size: 15px;
+    }
+}
+
+/* Responsive design for small tablets and large mobile screens */
 @media (max-width: 768px) {
     .allemp {
         flex-direction: column;
+        height: auto;
     }
 
     .nav {
         width: 100%;
-        padding: 10px;
+        padding: 15px;
         box-shadow: none;
-        transition: none;
     }
 
     .nav:hover {
@@ -202,21 +230,59 @@ table tr:hover {
 
     .side {
         margin-top: 20px;
+        padding: 15px;
     }
 
     .tblcontainer1,
     .tblcontainer2 {
+        padding: 15px;
         margin-bottom: 10px;
     }
 
     table {
         font-size: 14px;
     }
+
+    .tblcontainer2 .heading {
+        font-size: 20px;
+    }
+
+    .rytsubmitbtn,
+    .lefsubmitbtn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
 }
 
+/* Responsive design for mobile screens */
 @media (max-width: 480px) {
+    .nav {
+        padding: 10px;
+    }
+
     .nav a {
         font-size: 14px;
+        padding: 10px;
+    }
+
+    .side {
+        padding: 10px;
+    }
+
+    .tblcontainer1,
+    .tblcontainer2 {
+        padding: 10px;
+        margin: 0;
+    }
+
+    .tblcontainer2 .heading {
+        font-size: 18px;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        font-size: 13px;
     }
 
     .udp,
@@ -226,11 +292,11 @@ table tr:hover {
 
     .rytsubmitbtn,
     .lefsubmitbtn {
-        font-size: 14px;
-        padding: 8px 16px;
+        font-size: 12px;
+        padding: 8px 12px;
     }
 
-    table {
+    .showhidebtn {
         font-size: 12px;
     }
 }

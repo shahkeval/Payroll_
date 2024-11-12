@@ -1,11 +1,14 @@
 /* Overall container styling */
 .salrep {
     display: flex;
-    height: 100vh;
+    height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(to right, #e3f2fd, #e1bee7);
     color: #333;
-    overflow: hidden;
+    overflow: auto;
+    padding-bottom: 50px;
+    padding-left: 0%;
+    padding-right: 0%;
 }
 
 /* Navigation bar styling */
@@ -98,7 +101,11 @@
     user-select: none;
 }
 
-/* Responsive design for smaller screens */
+.salrep .page .id{
+    padding: 20px;
+}
+
+/* Adjusting table and layout for smaller screens */
 @media (max-width: 768px) {
     .salrep {
         flex-direction: column;
@@ -108,12 +115,6 @@
         width: 100%;
         padding: 10px;
         box-shadow: none;
-        transition: none;
-    }
-
-    .salrep .nav:hover {
-        width: 100%;
-        background: #34495e;
     }
 
     .salrep .side {
@@ -122,16 +123,42 @@
 
     .salrep .page {
         margin: 0;
+        padding: 10px; /* Add padding to prevent content from touching the screen edges */
     }
 
-    .salrep .page .body .tbl th, .salrep .page .body .tbl td {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .head {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .download-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+        right: 10px;
+    }
+
+    /* Adjust table for mobile */
+    .tbl table {
+        width: 100%;
+        min-width: 300px;
+        overflow-x: auto;
+    }
+
+    .tbl table th, .tbl table td {
+        padding: 5px;
         font-size: 14px;
     }
 
-    .salrep .page .body .paid {
-        width: 40px;
-        height: 40px;
-        font-size: 14px;
+    /* Ensure table columns wrap on small screens */
+    .tbl table td, .tbl table th {
+        white-space: nowrap;
     }
 }
 
@@ -145,4 +172,76 @@
         height: 35px;
         font-size: 12px;
     }
+
+    /* Make sure total amount row is visible */
+    .salrep .page .body .tbl th, .salrep .page .body .tbl td {
+        font-size: 13px;
+        padding: 4px; /* Less padding for better fit on small screens */
+    }
 }
+
+/* Container for title and button */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px 15px;
+    border-bottom: 2px solid #00164d;
+    flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+  }
+  
+  /* Center the title and reduce margin */
+.head {
+    font-size: 22px;
+    color: #012580;
+    font-weight: bold;
+    margin: 0 auto;
+  }
+  
+  /* Download button styling with reduced size for mobile */
+.download-btn {
+    position: absolute;
+    right: 15px;
+    background-color: #1abc9c;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  /* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .download-btn {
+        position: relative;
+      font-size: 12px;  /* Reduce font size for smaller screens */
+      padding: 6px 12px; /* Reduce padding for better fit */
+      margin: 0 auto;
+    }
+  
+    .header {
+      flex-direction: column; /* Stack title and button vertically on small screens */
+      align-items: center;
+    }
+  
+    .head {
+      font-size: 20px;  /* Slightly smaller font for the title */
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  
+    /* Ensure table columns are readable on mobile */
+    .tbl table th, .tbl table td {
+      padding: 5px;     /* Reduce padding in table cells */
+      font-size: 14px;  /* Adjust font size */
+    }
+  
+    /* Set min-width to prevent content from overflowing */
+    .tbl table {
+      width: 100%;
+      min-width: 30px;
+    }
+  }

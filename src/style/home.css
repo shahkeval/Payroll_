@@ -63,6 +63,7 @@
     padding: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .allbtns button {
@@ -75,6 +76,7 @@
     font-size: 16px;
     font-weight: 600;
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin: 5px;
 }
 
 .allbtns button.activetbl {
@@ -158,17 +160,46 @@ table tr:hover {
     font-weight: 600;
 }
 
-/* Responsive design for smaller screens */
+/* Responsive design for tablets */
+@media (max-width: 1024px) {
+    .nav {
+        width: 200px;
+    }
+
+    .nav:hover {
+        width: 220px;
+    }
+
+    .nav a {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .allbtns {
+        justify-content: center;
+    }
+
+    .allbtns button {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+    table th, table td {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
+
+/* Responsive design for mobile screens */
 @media (max-width: 768px) {
     .home {
         flex-direction: column;
+        height: auto;
     }
 
     .nav {
         width: 100%;
-        padding: 10px;
         box-shadow: none;
-        transition: none;
     }
 
     .nav:hover {
@@ -176,8 +207,13 @@ table tr:hover {
         background: #34495e;
     }
 
+    .nav a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
     .side {
-        margin-top: 20px;
+        padding: 15px;
     }
 
     .allbtns {
@@ -190,18 +226,32 @@ table tr:hover {
         margin-bottom: 10px;
     }
 
-    table {
+    .tblcontainer {
+        padding: 15px;
+    }
+
+    table th, table td {
+        padding: 8px;
         font-size: 14px;
     }
 }
 
+/* Responsive design for small mobile screens */
 @media (max-width: 480px) {
     .nav a {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .allbtns button {
-        font-size: 14px;
+        font-size: 13px;
         padding: 8px;
+    }
+
+    table th, table td {
+        font-size: 12px;
+    }
+
+    .heading th {
+        font-size: 16px;
     }
 }

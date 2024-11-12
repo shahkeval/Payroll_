@@ -168,50 +168,101 @@ table tr:hover {
     font-weight: 600;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
+/* Responsive design for tablets */
+@media (max-width: 992px) {
     .leavereq {
         flex-direction: column;
+        height: auto;
     }
 
     .nav {
         width: 100%;
-        padding: 10px;
+        padding: 15px;
         box-shadow: none;
         transition: none;
     }
 
     .nav:hover {
         width: 100%;
-        background: #34495e;
     }
 
     .side {
-        margin-top: 20px;
+        padding: 15px;
     }
 
     .btnbar {
         flex-direction: column;
         align-items: center;
+        padding: 10px;
     }
 
     .btnbar button {
         width: 100%;
         margin-bottom: 10px;
+        font-size: 14px;
     }
 
-    table {
+    .tbl {
+        padding: 15px;
+    }
+
+    table th, table td {
         font-size: 14px;
+        padding: 10px;
     }
 }
 
-@media (max-width: 480px) {
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
     .nav a {
         font-size: 14px;
+        padding: 10px;
     }
 
     .btnbar button {
-        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .tbl {
+        padding: 10px;
+    }
+
+    table th, table td {
+        font-size: 12px;
         padding: 8px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+}
+
+/* Smaller mobile screens */
+@media (max-width: 480px) {
+    .nav {
+        padding: 10px 5px;
+    }
+
+    .nav a {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .side {
+        padding: 10px;
+    }
+
+    .btnbar {
+        padding: 8px;
+    }
+
+    table th, table td {
+        font-size: 11px;
+        padding: 6px;
+    }
+
+    .btnbar button {
+        padding: 6px 10px;
+        font-size: 12px;
     }
 }

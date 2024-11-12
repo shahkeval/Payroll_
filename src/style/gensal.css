@@ -101,6 +101,7 @@
     margin-bottom: 20px;
 }
 
+/* Table styling */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -183,45 +184,128 @@ table td input, table td select {
     transform: scale(1.05);
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
+/* Responsive design for tablets */
+@media (max-width: 992px) {
     .gensal {
         flex-direction: column;
+        height: auto;
     }
 
     .nav {
         width: 100%;
-        padding: 10px;
+        padding: 15px;
         box-shadow: none;
-        transition: none;
     }
 
     .nav:hover {
         width: 100%;
-        background: #34495e;
     }
 
     .side {
-        margin-top: 20px;
+        padding: 15px;
+    }
+
+    .salbar {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .salbar button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .formside {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .tableside {
+        padding: 15px;
     }
 
     table td input, table td select {
         font-size: 14px;
     }
-
-    .salbar button {
-        font-size: 14px;
-        padding: 8px 12px;
-    }
 }
 
-@media (max-width: 480px) {
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
     .nav a {
         font-size: 14px;
+        padding: 10px;
+    }
+
+    .side {
+        padding: 10px;
+    }
+
+    .formside {
+        padding: 10px;
+    }
+
+    .tableside {
+        padding: 10px;
+    }
+
+    table th, table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .salbar button {
+        padding: 8px 12px;
+        font-size: 14px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .coin {
+        font-size: 48px;
     }
 
     .btnsub button {
+        padding: 10px 20px;
         font-size: 14px;
+    }
+
+    .gensal {
+        overflow: auto;
+    }
+}
+
+/* Responsive for smaller mobile screens */
+@media (max-width: 480px) {
+    .nav {
+        padding: 10px 5px;
+    }
+
+    .nav a {
+        font-size: 12px;
         padding: 8px;
+    }
+
+    .tableside, .formside {
+        padding: 8px;
+    }
+
+    table th, table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .btnsub button {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .salbar button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .coin {
+        font-size: 40px;
     }
 }

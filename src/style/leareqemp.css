@@ -6,6 +6,7 @@
     background: linear-gradient(to right, #e3f2fd, #e1bee7);
     color: #333;
     overflow: hidden;
+    flex-direction: row;
 }
 
 /* Navigation bar styling */
@@ -90,17 +91,7 @@
 }
 
 /* Form container styling */
-.applyside {
-    flex: 1;
-    overflow: auto;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Table container styling */
-.leaveside {
+.applyside, .leaveside {
     flex: 1;
     overflow: auto;
     padding: 20px;
@@ -168,8 +159,8 @@ table tr:hover {
     font-weight: 600;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
+/* Responsive Design for Tablets (1024px and below) */
+@media (max-width: 1024px) {
     .levreqemp {
         flex-direction: column;
     }
@@ -179,11 +170,6 @@ table tr:hover {
         padding: 10px;
         box-shadow: none;
         transition: none;
-    }
-
-    .nav:hover {
-        width: 100%;
-        background: #34495e;
     }
 
     .side {
@@ -205,7 +191,8 @@ table tr:hover {
     }
 }
 
-@media (max-width: 480px) {
+/* Responsive Design for Mobile Screens (768px and below) */
+@media (max-width: 768px) {
     .nav a {
         font-size: 14px;
     }
@@ -213,5 +200,43 @@ table tr:hover {
     .btnbar button {
         font-size: 14px;
         padding: 8px;
+    }
+
+    .side {
+        margin-top: 15px;
+    }
+
+    table th, table td {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+}
+
+/* Responsive Design for Small Mobile Screens (480px and below) */
+@media (max-width: 480px) {
+    .nav a {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .btnbar button {
+        font-size: 12px;
+        padding: 8px;
+        margin-bottom: 5px;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    .btnbar {
+        padding: 10px;
     }
 }

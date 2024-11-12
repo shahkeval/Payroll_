@@ -157,19 +157,76 @@ table td button.showhidebtn:hover {
     transform: translateX(-50%);
 }
 
-/* Mobile screen adjustments (max-width: 480px) */
-@media (max-width: 480px) {
+/* Responsive design for tablets */
+@media (max-width: 1024px) {
+    .nav {
+        width: 200px;
+    }
+
+    .nav:hover {
+        width: 240px;
+    }
+
+    .admincontainer {
+        padding: 15px;
+    }
+
+    .admincontainer h2 {
+        font-size: 22px;
+    }
+
+    .subbtn {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}
+
+/* Responsive design for smaller tablets and large mobile screens */
+@media (max-width: 768px) {
     .admin {
         flex-direction: column;
-        padding: 10px;
+        height: auto;
     }
 
     .nav {
         width: 100%;
-        padding: 10px;
         box-shadow: none;
+        padding: 15px;
     }
 
+    .nav a {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .side {
+        padding: 15px;
+    }
+
+    .admincontainer {
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+    .admincontainer h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .subbtn {
+        width: 100%;
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .adminface {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 480px) {
     .nav a {
         font-size: 14px;
         padding: 10px;
@@ -179,17 +236,10 @@ table td button.showhidebtn:hover {
 
     .side {
         padding: 10px;
-        margin-top: 20px;
-    }
-
-    .admincontainer {
-        padding: 15px;
-        border-radius: 10px;
     }
 
     .admincontainer h2 {
-        font-size: 20px;
-        text-align: center;
+        font-size: 18px;
     }
 
     table td input {
@@ -202,9 +252,8 @@ table td button.showhidebtn:hover {
     }
 
     .subbtn {
-        padding: 10px;
         font-size: 14px;
-        width: 100%;
+        padding: 10px;
     }
 
     /* Hide the face graphic on mobile for a simplified view */
