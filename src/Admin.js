@@ -55,7 +55,7 @@ function Admin() {
     
     const handleSubmit = (e) => {    
         e.preventDefault();
-        axios.post("https://col-projectback.vercel.app/Admin",
+        axios.post("https://payrollback.vercel.app/Admin",
         {  id: formValues.id,
         name: formValues.name,
         gender: formValues.gender,

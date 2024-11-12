@@ -27,7 +27,7 @@ function GenSal() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get('http://localhost:8001/allEmps');
+        const res = await axios.get('https://payrollback.vercel.app/allEmps');
         setAllUsers(res.data);
       } catch (error) {
         console.error('Error fetching employees:', error);
@@ -40,7 +40,7 @@ function GenSal() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get('http://localhost:8001/allSalary');
+        const res = await axios.get('https://payrollback.vercel.app/allSalary');
         setAllSal(res.data);
       } catch (error) {
         console.error('Error fetching salary records:', error);
@@ -78,9 +78,9 @@ function GenSal() {
     }
 
     try {
-      const res = await axios.delete(`http://localhost:8001/deleteSalary/${user.id}`);
+      const res = await axios.delete(`https://payrollback.vercel.app/deleteSalary/${user.id}`);
       console.log('Salary deleted successfully:', res.data);
-      const updatedData = await axios.get('http://localhost:8001/allSalary');
+      const updatedData = await axios.get('https://payrollback.vercel.app/allSalary');
       setAllSal(updatedData.data);
     } catch (error) {
       console.error('Error deleting salary record:', error);
@@ -110,7 +110,7 @@ function GenSal() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('http://localhost:8001/Salary', formValues)
+      .post('https://payrollback.vercel.app/Salary', formValues)
       .then(async (result) => {
         console.log(result);
         setFormValues({
@@ -122,7 +122,7 @@ function GenSal() {
           month: "" // Reset month on submit
         });
         setActiveTable('Table');
-        const res = await axios.get('http://localhost:8001/allSalary');
+        const res = await axios.get('https://payrollback.vercel.app/allSalary');
         setAllSal(res.data);
       })
       .catch((err) => {

@@ -9,7 +9,7 @@ const ForgotPassword = () => {
         console.log("hello submit");
         e.preventDefault();
         try {
-            const response = await axios.post('https://col-projectback.vercel.app/forgot-password', { email });
+            const response = await axios.post('https://payrollback.vercel.app/forgot-password', { email });
             setMessage(response.data.message);
         } catch (error) {
             setMessage('Error sending reset link');

@@ -23,7 +23,7 @@ export default function SalRep() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:8001/oneSalary/${id}`);
+        const res = await axios.get(`https://payrollback.vercel.app/oneSalary/${id}`);
         setAllSal(res.data);
       } catch (error) {
         console.error('Error fetching salary details:', error);

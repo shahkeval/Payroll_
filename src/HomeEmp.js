@@ -32,7 +32,7 @@ function HomeEmp() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`https://col-projectback.vercel.app/oneEmp/${id}`);
+        const res = await axios.get(`https://payrollback.vercel.app/oneEmp/${id}`);
         setAllUsers(res.data);
       } catch (error) {
         console.error('Error fetching emps:', error);
@@ -65,7 +65,7 @@ function HomeEmp() {
   };
 
   const handleUpdateFormCencle = async (e) => {
-    const updatedData = await axios.get(`https://col-projectback.vercel.app/oneEmp/${id}`);
+    const updatedData = await axios.get(`https://payrollback.vercel.app/oneEmp/${id}`);
     setAllUsers(updatedData.data);
     setSelectedUser(null);
     setUpdateFormData({
@@ -82,9 +82,9 @@ function HomeEmp() {
   const handleUpdateFormSubmit = async (e) => {
   e.preventDefault();
   try {
-    const res = await axios.put(`https://col-projectback.vercel.app/updateEmp/${selectedUser.id}`, updateFormData);
+    const res = await axios.put(`https://payrollback.vercel.app/updateEmp/${selectedUser.id}`, updateFormData);
     console.log('Employee updated successfully:', res.data);
-    const updatedData = await axios.get(`https://col-projectback.vercel.app/oneEmp/${id}`);
+    const updatedData = await axios.get(`https://payrollback.vercel.app/oneEmp/${id}`);
     setAllUsers(updatedData.data);
     setSelectedUser(null);
     setinstate(false);
