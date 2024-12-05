@@ -77,7 +77,7 @@ export default function LeaReqEmp() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get(`http://localhost:8001/oneLeave/${id}`);
+        const res = await axios.get(`https://payrollback.vercel.app/oneLeave/${id}`);
         setAllSal(res.data);
       } catch (error) {
         console.error('Error fetching leaves:', error);
@@ -174,7 +174,7 @@ export default function LeaReqEmp() {
   
     // Submit the leave
     axios
-      .post('http://localhost:8001/leave', formValues)
+      .post('https://payrollback.vercel.app/leave', formValues)
       .then(async (result) => {
         console.log(result);
   
@@ -198,7 +198,7 @@ export default function LeaReqEmp() {
           endDate: '',
         });
   
-        const res = await axios.get(`http://localhost:8001/oneLeave/${id}`);
+        const res = await axios.get(`https://payrollback.vercel.app/oneLeave/${id}`);
         setAllSal(res.data);
       })
       .catch((err) => {

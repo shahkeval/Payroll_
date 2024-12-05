@@ -19,11 +19,11 @@ export default function LeaReq() {
 
   const refresh = async () => {
     try {
-      const res1 = await axios.get(`http://localhost:8001/allLeaveReq`);
+      const res1 = await axios.get(`https://payrollback.vercel.app/allLeaveReq`);
       setAllSalreq(res1.data);
-      const res2 = await axios.get(`http://localhost:8001/allLeaveApp`);
+      const res2 = await axios.get(`https://payrollback.vercel.app/allLeaveApp`);
       setAllSalapp(res2.data);
-      const res3 = await axios.get(`http://localhost:8001/allLeaveRej`);
+      const res3 = await axios.get(`https://payrollback.vercel.app/allLeaveRej`);
       setAllSalrej(res3.data);
     } catch (error) {
       console.error('Error fetching leave requests:', error);
@@ -38,7 +38,7 @@ export default function LeaReq() {
 
   const handleApprove = async (id) => {
     try {
-      await axios.put(`http://localhost:8001/approveLeave/${id}`);
+      await axios.put(`https://payrollback.vercel.app/approveLeave/${id}`);
       refresh();
     } catch (error) {
       console.error('Error approving leave request:', error);
@@ -47,7 +47,7 @@ export default function LeaReq() {
 
   const handleReject = async (id) => {
     try {
-      await axios.put(`http://localhost:8001/rejectLeave/${id}`);
+      await axios.put(`https://payrollback.vercel.app/rejectLeave/${id}`);
       refresh();
     } catch (error) {
       console.error('Error rejecting leave request:', error);
