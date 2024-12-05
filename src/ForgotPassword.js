@@ -12,6 +12,7 @@ const ForgotPassword = () => {
             const response = await axios.post('https://payrollback.vercel.app/forgot-password', { email });
             setMessage(response.data.message);
         } catch (error) {
+            console.log(error);
             setMessage('Error sending reset link');
         }
     };

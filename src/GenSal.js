@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import './style/gensal.css'; 
+import './style/gensal.css';
 
 function GenSal() {
   const [allUsers, setAllUsers] = useState([]);
@@ -163,7 +163,7 @@ function GenSal() {
                 <tr>
                   <td align='right'>Salary ID :</td>
                   <td>
-                    <input 
+                    <input
                       onChange={handleInputChange}
                       value={formValues.id}
                       required
@@ -263,13 +263,13 @@ function GenSal() {
           </div>
         )}
 
-        <br/>
+        <br />
         {activeTable === 'Table' && (
           <div className="tableside">
             <table>
               <tr>
                 <th>Salary ID</th>
-                <th>Employee ID</th>
+                <th>Employee Name</th>
                 <th>Gross Salary</th>
                 <th>Salary Tax</th>
                 <th>Total Salary</th>
@@ -279,14 +279,26 @@ function GenSal() {
               {allsal.map((user) => (
                 <tr key={user.id}>
                   <td>{user.id}</td>
-                  <td>{user.s_eid}</td>
+                  <td>
+                    {allUsers
+                      .filter((employee) => user.s_eid === employee.id)
+                      .map((employee) => (
+                        <span key={employee.id}>
+                          {employee.name} {/* Display employee name */}
+                          <br /> {/* Add a line break for separation */}
+                        </span>
+                      ))}
+                  </td>
                   <td>{user.g_sal}</td>
                   <td>{user.t_sal}</td>
                   <td>{user.sal_amt}</td>
                   <td>{user.month}</td> {/* Display Month */}
-                  <td><button onClick={() => handleDeleteClick(user)}>🗑️</button></td>
+                  <td>
+                    <button onClick={() => handleDeleteClick(user)}>🗑️</button>
+                  </td>
                 </tr>
               ))}
+
             </table>
           </div>
         )}

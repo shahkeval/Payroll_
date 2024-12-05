@@ -12,4 +12,9 @@
     align-items: center;
     
   }
+  #for_link{
+    text-decoration: none;
+    color: purple;
+    padding-right: 100%;
+  }
   

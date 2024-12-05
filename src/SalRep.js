@@ -7,8 +7,13 @@ import jsPDF from 'jspdf';
 import './style/selrep.css'; 
 import 'jspdf-autotable';
 
+
+
+
 export default function SalRep() {
   const [allsal, setAllSal] = useState({});
+  const [allUsers, setAllUsers] = useState([]);
+
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -79,7 +84,9 @@ export default function SalRep() {
           <div>
             <div className="id">
               <div className="sid">Salary Id : {allsal.id}</div>
-              <div className="eid">Employee Id : {allsal.s_eid}</div>
+              <div className="sid">Employee Id : {allsal.s_eid}</div>
+
+            
               <div className="month">Month : {allsal.month}</div>
             </div>
             <div className="tbl">

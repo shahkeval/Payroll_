@@ -95,7 +95,7 @@ function Emp() {
         <div className="side">
           <div className="tblcontainer">
         <form method='post' action="" onSubmit={handleSubmit}>
-              <h2 className='heading'>Ragistar New Employee</h2>
+              <h2 className='heading'>Register New Employee</h2>
             <table>
                 <tr><td align='right'>Emplyee ID :-</td><td><input onChange={handleChange} value={formValues.id} type="text" name='id' placeholder="Enter ID" required/></td></tr>
                 <tr><td align='right'>Emplyee Name :-</td><td><input onChange={handleChange} value={formValues.name} type="text" name='name' placeholder="Enter Name" required/></td></tr>

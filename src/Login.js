@@ -79,7 +79,7 @@ export default function Login() {
             <div  onClick={handleTogglePassword}>
               {showPassword ? '👁️‍🗨️' : '👁️'}
 
-              <a href='./forgot-password'>ForgotPassword</a>
+              <a href='./forgot-password' id='for_link'>ForgotPassword</a>
             </div>
           </td>
         </tr>

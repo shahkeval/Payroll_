@@ -229,7 +229,7 @@ app.post('/leave',async (req, res) => {
       return res.status(400).json({ error: 'Leave ID already exist' });
     }
     if (existingLeave) {
-      return res.status(400).json({ error: 'Your Leave is alredy exist' });
+      return res.status(400).json({ error: 'Your One Leave is alredy in Panding status please contact to admin' });
     }
     UserModelLeave.create(req.body)
     .then(users => res.json(users))
@@ -352,7 +352,7 @@ app.post('/forgot-password', async (req, res) => {
     console.log("hello forgot6");
     // Send reset link via email
     const emml="shahkeval7383@gmail.com";
-    const pass="oviz mkxi cjck mmoq";
+    const pass="jxtw bwxj kezd qfqu";
     const transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
@@ -366,7 +366,7 @@ app.post('/forgot-password', async (req, res) => {
         to: email,
         from: emml,
         subject: 'Password Reset',
-        text: `You are receiving this because you (or someone else) requested to reset your password. Click the following link to reset your password: http://localhost:5000/reset-password/${resetToken}`,
+        text: `You are receiving this because you (or someone else) requested to reset your password. Click the following link to reset your password: https://payrollback.vercel.app/reset-password/${resetToken}`,
     };
     console.log("hello forgot8");
     transporter.sendMail(mailOptions, (error, response) => {
@@ -416,4 +416,4 @@ app.post('/reset-password/:token', async (req, res) => {
         return res.status(400).json({ message: 'Invalid or expired token' });
     }
 });
-//export default Router();
+//export default Router();
